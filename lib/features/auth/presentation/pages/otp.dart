@@ -2,6 +2,7 @@ import 'package:assignment/common/widgets/blue_button.dart';
 import 'package:assignment/config/theme/app_color.dart';
 import 'package:assignment/config/theme/app_text.dart';
 import 'package:assignment/core/extensions/extension_methods.dart';
+import 'package:assignment/features/emptystate/presentation/pages/emptystate.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -43,7 +44,7 @@ class OtpScreen extends StatelessWidget {
               ),
 
               BlueButton(title: 'Continue', width: 327, height: 48 , onPressed: () {
-                
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const Emptystate()));
               },)
             ],
           ),
