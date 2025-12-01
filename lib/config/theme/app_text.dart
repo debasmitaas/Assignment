@@ -5,8 +5,16 @@ class AppTextStyle {
   static const String _fontFamily = 'Inter';
 
   // 1. Bold Heading
-  static TextStyle get boldHeading => TextStyle(
+  static TextStyle get boldHeading1 => TextStyle(
     fontSize: 24,
+    fontFamily: _fontFamily,
+    fontVariations: const [
+      FontVariation('wght', 900),
+    ],
+    color: Colors.black, 
+  );
+  static TextStyle get boldHeading2 => TextStyle(
+    fontSize: 16,
     fontFamily: _fontFamily,
     fontVariations: const [
       FontVariation('wght', 900),
@@ -24,15 +32,6 @@ class AppTextStyle {
     color: AppColor.grey, 
   );
 
-  // 3. Normal Body Text
-  // static TextStyle get body => TextStyle(
-  //   fontSize: 14,
-  //   fontFamily: _fontFamily,
-  //   fontVariations: const [
-  //     FontVariation('wght', 400),
-  //   ],
-  //   color: AppColor.darkBlue,
-  // );
 
   // 4. Button Text
   static TextStyle get button => TextStyle(

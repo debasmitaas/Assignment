@@ -3,6 +3,7 @@ import 'package:assignment/config/assets/app_vectors.dart';
 import 'package:assignment/config/theme/app_color.dart';
 import 'package:assignment/config/theme/app_text.dart';
 import 'package:assignment/core/extensions/extension_methods.dart';
+import 'package:assignment/features/auth/presentation/pages/otp.dart';
 import 'package:assignment/features/auth/presentation/widgets/form_fields.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -36,7 +37,7 @@ class Login extends StatelessWidget {
                         alignment: Alignment.centerLeft,
                         child: Text(
                           'Welcome!',
-                          style: AppTextStyle.boldHeading,
+                          style: AppTextStyle.boldHeading1,
                         ),
                       ),
                       const SizedBox(height: 20),
@@ -61,7 +62,11 @@ class Login extends StatelessWidget {
                         title: 'Login',
                         width: 327,
                         height: 48,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => const OtpScreen(),
+                          ));
+                        },
                       ),
 
                       const SizedBox(height: 10),
