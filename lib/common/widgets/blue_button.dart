@@ -4,38 +4,35 @@ import 'package:assignment/core/extensions/extension_methods.dart';
 import 'package:flutter/material.dart';
 
 class BlueButton extends StatelessWidget {
-
   final VoidCallback? onPressed;
   final String title;
-   final double width;
+  final double width;
   final double height;
 
-  const BlueButton({super.key, this.onPressed, required this.title, required this.width, required this.height});
-
-
-  
-
+  const BlueButton({
+    super.key,
+    this.onPressed,
+    required this.title,
+    required this.width,
+    required this.height,
+  });
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: onPressed, 
+      onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-
-
-
-
-fixedSize: Size(
+        fixedSize: Size(
           context.getResponsiveWidth(width),
           context.getResponsiveHeight(height),
         ),
 
-        backgroundColor:AppColor.darkBlue,
+        backgroundColor: AppColor.darkBlue,
         foregroundColor: AppColor.backgroundColor,
 textStyle: AppTextStyle.button,
-shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
-      child: Text(title,),
+      child: Text(title),
     );
   }
 }
