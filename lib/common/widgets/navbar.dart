@@ -30,6 +30,3 @@ class Navbar extends StatelessWidget {
   }
 }
 
-// Widget buildNavItem(String title) {
-
-//   }
