@@ -1,6 +1,5 @@
 import 'package:assignment/config/theme/app_theme.dart';
-import 'package:assignment/features/auth/presentation/pages/login.dart';
-// import 'package:assignment/features/onboarding/presentation/pages/onboarding_screen.dart';
+import 'package:assignment/features/onboarding/presentation/pages/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -18,6 +17,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(theme: AppTheme.lightTheme,home: const Login(),);
+    return MaterialApp(theme: AppTheme.lightTheme,home: const OnboardingScreen(),);
   }
 }
