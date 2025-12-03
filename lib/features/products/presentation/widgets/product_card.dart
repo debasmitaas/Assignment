@@ -18,21 +18,18 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: context.getResponsiveHeight(200.5), 
+      height: context.getResponsiveHeight(200.5),
       width: context.getResponsiveWidth(189),
       child: Card(
-        clipBehavior: Clip.antiAlias, 
+        clipBehavior: Clip.antiAlias,
         elevation: 0.0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 1. Image/Placeholder Area 
             Expanded(
               child: SizedBox(
-                width: double.infinity, 
+                width: double.infinity,
                 child: SvgPicture.asset(
                   AppVectors.placeHolderImage,
                   fit: BoxFit.cover,
@@ -40,28 +37,24 @@ class ProductCard extends StatelessWidget {
               ),
             ),
 
-            // 2. Text/Price Area - FIX IMPLEMENTED HERE
             Container(
-              // 🎯 FIX: Set width to double.infinity to force it to take 
-              // the full width of the parent Card.
               width: double.infinity,
               color: AppColor.blueGrey,
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 10.0,
+                  vertical: 6.0,
+                ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Product Name
                     Text(
                       productName,
                       style: Theme.of(context).textTheme.bodyMedium,
                     ),
-                    const SizedBox(height: 1), 
-                    // Price
-                    Text(
-                      productPrice,
-                      style: AppTextStyle.boldHeading3,
-                    ),
+                    const SizedBox(height: 1),
+
+                    Text(productPrice, style: AppTextStyle.boldHeading3),
                   ],
                 ),
               ),
