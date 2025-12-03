@@ -36,3 +36,39 @@ textStyle: AppTextStyle.button,
     );
   }
 }
+
+class BlueOutlinedButton extends StatelessWidget {
+  final VoidCallback? onPressed;
+  final String title;
+  final double width;
+  final double height;
+
+  const BlueOutlinedButton({
+    super.key,
+    this.onPressed,
+    required this.title,
+    required this.width,
+    required this.height,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: onPressed,
+      style: ElevatedButton.styleFrom(
+        fixedSize: Size(
+          context.getResponsiveWidth(width),
+          context.getResponsiveHeight(height),
+        ),
+
+        backgroundColor: Colors.transparent,
+        foregroundColor: AppColor.darkBlue,
+        
+textStyle: AppTextStyle.button,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        side: BorderSide(color: AppColor.darkBlue, width: 2),
+      ),
+      child: Text(title),
+    );
+  }
+}

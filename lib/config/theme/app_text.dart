@@ -22,6 +22,15 @@ class AppTextStyle {
     color: Colors.black, 
   );
 
+  static TextStyle get boldHeading3 => TextStyle(
+    fontSize: 14,
+    fontFamily: _fontFamily,
+    fontVariations: const [
+      FontVariation('wght', 700),
+    ],
+    color: Colors.black, 
+  );
+
   // 2. Subtitle
   static TextStyle get subtitle => TextStyle(
     fontSize: 12,
@@ -46,6 +55,15 @@ class AppTextStyle {
   // 5. Blue Text Variant
   static TextStyle get blueText => TextStyle(
     fontSize: 12,
+    fontFamily: _fontFamily,
+    fontVariations: const [
+      FontVariation('wght', 800),
+    ],
+    color: AppColor.darkBlue,
+  );
+  // 5. Blue Text Variant
+  static TextStyle get blueText2 => TextStyle(
+    fontSize: 10,
     fontFamily: _fontFamily,
     fontVariations: const [
       FontVariation('wght', 800),
