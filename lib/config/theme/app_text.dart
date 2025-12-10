@@ -70,6 +70,24 @@ class AppTextStyle {
     ],
     color: AppColor.darkBlue,
   );
+  
+  static TextStyle get pillbuttonblueText => TextStyle(
+    fontSize: 9,
+    fontFamily: _fontFamily,
+    fontVariations: const [
+      FontVariation('wght', 600),
+    ],
+    color: AppColor.darkBlue,
+  );
+
+  static TextStyle get pillbuttonwhiteText => TextStyle(
+    fontSize: 9,
+    fontFamily: _fontFamily,
+    fontVariations: const [
+      FontVariation('wght', 600),
+    ],
+    color: AppColor.backgroundColor,
+  );
 
   // 6. White Text Variant
   static TextStyle get whiteText => TextStyle(
