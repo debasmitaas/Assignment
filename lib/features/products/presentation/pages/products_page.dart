@@ -1,4 +1,6 @@
+import 'package:assignment/common/widgets/blue_button.dart';
 import 'package:assignment/config/theme/app_color.dart';
+import 'package:assignment/features/allevents/presentation/pages/events_page.dart';
 import 'package:assignment/features/products/presentation/widgets/product_card.dart';
 import 'package:assignment/features/products/presentation/widgets/sort_filter_button.dart';
 import 'package:flutter/material.dart';
@@ -39,7 +41,19 @@ class ProductsPage extends StatelessWidget {
               ),
 
               const SizedBox(height: 10),
-
+              BlueButton(
+                title: 'Next Page',
+                width: 200,
+                height: 30,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>  EventsPage(),
+                    ),
+                  );
+                },
+              ),
               Row(
                 mainAxisAlignment: .spaceBetween,
                 children: [
