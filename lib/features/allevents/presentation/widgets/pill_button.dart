@@ -1,6 +1,5 @@
 import 'package:assignment/config/theme/app_color.dart';
 import 'package:assignment/config/theme/app_text.dart';
-import 'package:assignment/core/extensions/extension_methods.dart';
 import 'package:flutter/material.dart';
 
 class PillButton extends StatefulWidget {
@@ -27,8 +26,8 @@ class _PillButtonState extends State<PillButton> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: widget.width ?? context.getResponsiveWidth(94),
-      height: widget.height ?? context.getResponsiveHeight(14),
+      width: widget.width ?? 90,
+      height: widget.height ?? 24,
       child: ElevatedButton(
         onPressed: () {
           setState(() {
@@ -39,16 +38,18 @@ class _PillButtonState extends State<PillButton> {
         style: ElevatedButton.styleFrom(
           backgroundColor: isSelected ? AppColor.darkBlue : AppColor.lightBlue,
           foregroundColor: isSelected ? Colors.white : AppColor.darkBlue,
-          shape: const StadiumBorder(), // This creates perfect pill shape
+          shape: const StadiumBorder(),
           elevation: 0,
-          padding: EdgeInsets.zero,
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 0),
+          minimumSize: Size.zero,
+          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
           splashFactory: NoSplash.splashFactory,
         ),
         child: Text(
           widget.text,
-          style: AppTextStyle.blueText2.copyWith(
-            color: isSelected ? Colors.white : AppColor.darkBlue,
-          ),
+          style: isSelected 
+              ? AppTextStyle.pillbuttonwhiteText 
+              : AppTextStyle.pillbuttonblueText,
         ),
       ),
     );
